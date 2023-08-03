@@ -1,2 +1,3 @@
-# locale-handler
-Locale handler for middleware with redirects
+# @wezom/locale-handler
+
+> Locale handler for middleware with redirects

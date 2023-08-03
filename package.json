@@ -1,0 +1,33 @@
+{
+  "name": "@wezom/locale-handler",
+  "version": "1.0.0",
+  "description": "Locale handler for middleware with redirects",
+  "main": "dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "locale",
+    "handler",
+    "middleware",
+    "redirect"
+  ],
+  "author": {
+    "name": "Oleh Dutchenko",
+    "email": "dutchenko.o.dev@gmai.com"
+  },
+  "license": "BSD 3-Clause License",
+  "devDependencies": {
+    "eslint": "^8.46.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.1.6",
+    "vitest": "^0.34.1"
+  },
+  "dependencies": {
+    "@formatjs/intl-localematcher": "^0.4.0",
+    "negotiator": "^0.6.3"
+  }
+}
