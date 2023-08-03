@@ -1,6 +1,6 @@
 {
   "name": "@wezom/locale-handler",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Locale handler for middleware with redirects",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
