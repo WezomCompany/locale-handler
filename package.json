@@ -3,11 +3,25 @@
   "version": "1.0.0",
   "description": "Locale handler for middleware with redirects",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "buid": "rollup --config rollup.config.mjs",
+    "prebuid": "del-cli dist",
+    "postbuid": "del-cli dist/__specs__",
+    "test": "vitest run",
+    "test-with-watch-mode": "vitest",
+    "test-with-coverage": "vitest run --coverage && istanbul-badges-readme && prettier \"./README.md\" --check --write",
+    "lint": "eslint \"./src/**/**.ts\" --cache --cache-location ./.cache/eslint/src",
+    "lint-with-autofix": "pnpm run lint --fix",
+    "format": "prettier \"./src/**/*.ts\" --write --check",
+    "local-pr-ready-check": "pnpm run format && pnpm run lint-with-autofix && pnpm run test",
+    "ci-check": "pnpm run lint && pnpm run test"
   },
   "keywords": [
     "locale",
@@ -21,8 +35,21 @@
   },
   "license": "BSD 3-Clause License",
   "devDependencies": {
+    "@babel/eslint-parser": "^7.22.9",
+    "@rollup/plugin-terser": "^0.4.3",
+    "@rollup/plugin-typescript": "^11.1.2",
+    "@types/negotiator": "^0.6.1",
+    "@vitest/coverage-istanbul": "^0.34.1",
+    "@wezom/eslint-config": "^11.0.5",
+    "@wezom/eslint-config-ts": "^11.0.5",
+    "del-cli": "^5.0.0",
     "eslint": "^8.46.0",
+    "eslint-config-prettier": "^8.9.0",
+    "glob": "^10.3.3",
+    "istanbul-badges-readme": "^1.8.5",
+    "jsdom": "^22.1.0",
     "prettier": "^3.0.0",
+    "rollup": "^3.27.0",
     "typescript": "^5.1.6",
     "vitest": "^0.34.1"
   },

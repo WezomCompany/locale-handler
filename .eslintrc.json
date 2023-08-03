@@ -1,0 +1,14 @@
+{
+  "root": true,
+  "extends": ["@wezom/eslint-config", "eslint-config-prettier"],
+  "parser": "@babel/eslint-parser",
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "extends": ["@wezom/eslint-config-ts", "eslint-config-prettier"],
+      "parserOptions": {
+        "project": "./tsconfig.json"
+      }
+    }
+  ]
+}
