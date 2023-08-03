@@ -27,7 +27,10 @@
     "locale",
     "handler",
     "middleware",
-    "redirect"
+    "redirect",
+    "nextjs",
+    "app",
+    "internationalization"
   ],
   "author": {
     "name": "Oleh Dutchenko",
