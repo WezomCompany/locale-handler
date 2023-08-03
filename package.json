@@ -4,6 +4,7 @@
   "description": "Locale handler for middleware with redirects",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "type": "module",
   "files": [
     "dist"
   ],
