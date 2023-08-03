@@ -8,9 +8,9 @@
     "dist"
   ],
   "scripts": {
-    "buid": "rollup --config rollup.config.mjs",
-    "prebuid": "del-cli dist",
-    "postbuid": "del-cli dist/__specs__",
+    "build": "rollup --config rollup.config.mjs",
+    "prebuild": "del-cli dist",
+    "postbuild": "del-cli dist/__specs__",
     "test": "vitest run",
     "test-with-watch-mode": "vitest",
     "test-with-coverage": "vitest run --coverage && istanbul-badges-readme && prettier \"./README.md\" --check --write",
