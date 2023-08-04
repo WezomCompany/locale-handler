@@ -15,13 +15,13 @@ const files = glob
 	]);
 
 export default {
-	input: 'src/index.ts',
+	input: Object.fromEntries(files),
 	output: [
 		{
 			dir: 'dist',
 			format: 'cjs',
 		},
 	],
-	plugins: [typescript()],
+	plugins: [typescript(), terser()],
 	external: ['negotiator', '@formatjs/intl-localematcher'],
 };
